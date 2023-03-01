@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss">
 .bg-orange {
-  background-color: orange;
+  background-color: #d48f38;
   padding-top: 50px;
 }
 

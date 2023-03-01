@@ -1,11 +1,14 @@
 <script>
 import axios from "axios";
+import CharacterCardVue from "./CharacterCard.vue";
 export default {
   data() {
     return {
       cards: [],
     };
   },
+
+  components: { CharacterCardVue },
 
   created() {
     const firstRequest = axios.get(
@@ -28,16 +31,14 @@ export default {
 
 <template>
   <div class="row row-cols-5 bg-white">
-    <div v-for="(card, index) in cards" v-bind:key="index" class="col">
-      <img :src="card.card_images[0].image_url" class="img-fluid" alt="" />
-      <h3>{{ card.name }}</h3>
-      <p>{{ card.archetype }}</p>
-    </div>
+    <CharacterCardVue
+      v-for="card in cards"
+      :key="card.id"
+      :pic="card.card_images[0].image_url"
+      :name="card.name"
+      :type="card.archetype"
+    />
   </div>
 </template>
 
-<style lang="scss">
-.bg-white {
-  background-color: white;
-}
-</style>
+<style lang="scss"></style>
