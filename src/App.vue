@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <img :src="img" alt="" />
+  <img class="logo" :src="img" alt="" />
   <h1>{{ title }}</h1>
 
   <AppMain />
@@ -26,7 +26,7 @@ body {
     display: inline;
     vertical-align: middle;
   }
-  img {
+  .logo {
     width: 80px;
     margin: 20px 30px;
   }
