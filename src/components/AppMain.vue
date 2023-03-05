@@ -9,11 +9,6 @@ export default {
 <template>
   <main class="bg-orange">
     <div class="container">
-      <select class="mb-5 select" name="" id="">
-        <option value="Alien">Alien</option>
-        <option value="Alien">Alien</option>
-        <option value="Alien">Alien</option>
-      </select>
       <CharacterList />
     </div>
   </main>
